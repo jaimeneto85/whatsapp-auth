@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "WhatsappAuthModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "expo.modules.whatsappauth.WhatsappAuthModule"
+    ]
+  }
+}

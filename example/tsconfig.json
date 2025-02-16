@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "whatsapp-auth": ["../src/index"],
+      "whatsapp-auth/*": ["../src/*"]
+    }
+  }
+}
