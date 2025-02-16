@@ -17,3 +17,10 @@ export type WhatsappAuthViewProps = {
   onLoad: (event: { nativeEvent: OnLoadEventPayload }) => void;
   style?: StyleProp<ViewStyle>;
 };
+
+export type WhatsappButtonProps = {
+  callBackScreen: () => void;
+  whatsappNumberCore?: string;
+  defaultMessageLogin?: string;
+  buttonText?: string;
+}
