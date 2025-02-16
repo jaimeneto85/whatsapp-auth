@@ -9,9 +9,14 @@ const WhatsappButton: React.FC<WhatsappButtonProps> = ({
   whatsappNumberCore,
   defaultMessageLogin,
   buttonText = 'Sign Up with WhatsApp',
+  buttonStyle,
+  buttonTextStyle,
+  iconStyle,
+  iconColor,
+  iconSize,
 }) => {
-  const number = whatsappNumberCore || process.env.WHATSAPP_NUMBER_CORE;
-  const message = defaultMessageLogin || process.env.DEFAULT_MESSAGE_LOGIN;
+  const number = whatsappNumberCore || process.env.WHATSAPP_NUMBER_CORE || process.env.EXPO_PUBLIC_WHATSAPP_NUMBER_CORE;
+  const message = defaultMessageLogin || process.env.DEFAULT_MESSAGE_LOGIN || process.env.EXPO_PUBLIC_DEFAULT_MESSAGE_LOGIN;
 
   const handlePress = () => {
     if (!number || !message) {
@@ -42,9 +47,9 @@ const WhatsappButton: React.FC<WhatsappButtonProps> = ({
   };
 
   return (
-    <Pressable style={styles.button} onPress={handlePress}>
-      <WhatsappIcon width={20} height={20} color="#fff" />
-      <Text style={styles.buttonText}>{buttonText}</Text>
+    <Pressable style={[styles.button, buttonStyle]} onPress={handlePress}>
+      <WhatsappIcon width={iconSize} height={iconSize} color={iconColor} style={iconStyle} />
+      <Text style={[styles.buttonText, buttonTextStyle]}>{buttonText}</Text>
     </Pressable>
   );
 };

@@ -1,4 +1,4 @@
-import type { StyleProp, ViewStyle } from 'react-native';
+import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export type OnLoadEventPayload = {
   url: string;
@@ -23,4 +23,9 @@ export type WhatsappButtonProps = {
   whatsappNumberCore?: string;
   defaultMessageLogin?: string;
   buttonText?: string;
+  buttonStyle?: StyleProp<ViewStyle>;
+  buttonTextStyle?: StyleProp<TextStyle>;
+  iconStyle?: StyleProp<ViewStyle>;
+  iconColor?: string;
+  iconSize?: number;
 }
