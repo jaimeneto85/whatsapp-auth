@@ -1,6 +1,6 @@
 {
   "name": "whatsapp-auth",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Module for authenticating applications via WhatsApp",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -29,6 +29,7 @@
   "license": "MIT",
   "homepage": "https://github.com/jaimeneto85/whatsapp-auth#readme",
   "devDependencies": {
+    "@types/node": "^22.14.1",
     "@types/react": "~18.3.12",
     "expo": "~52.0.0",
     "expo-module-scripts": "^4.0.3",
